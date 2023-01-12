@@ -37,6 +37,12 @@ More aggressive Service Detection	 nmap -sV --version-intensity 5 192.168.1.1
 Lighter banner grabbing detection	 nmap -sV --version-intensity 0 192.168.1.1
 ```
 
+- WordPress
+
+```bash
+
+
+```
 - Nmap Output Formats
 
 ```bash
