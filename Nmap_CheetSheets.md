@@ -40,7 +40,11 @@ Lighter banner grabbing detection	 nmap -sV --version-intensity 0 192.168.1.1
 - WordPress
 
 ```bash
-
+http-wordpress-users.nse
+http-wordpress-enum.nse
+http-wordpress-brute.nse
+http-vuln-cve2017-1001000.nse
+http-vuln-cve2014-8877.nse
 
 ```
 - Nmap Output Formats
