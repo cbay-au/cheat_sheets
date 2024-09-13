@@ -1,4 +1,4 @@
-ctrl = alt a
+^ = alt a
 
 ==========================================          ==========================================
              TMUX COMMAND                                        WINDOW (TAB)
@@ -14,8 +14,8 @@ Kill         kill-session -t <session>              Close        ^b &
              CONTROLS                               Next         ^b n
 ==========================================          Previous     ^b p
                                                     Choose       ^b w <name>
-Detach       ^b d
-List         ^b =                                   ==========================================
+Detach       ^a d
+List         ^a =                                   ==========================================
 Buffer       ^b <PgUpDn>                                         PANE (SPLIT WINDOW)
 Command      ^b : <command>                         ==========================================
 
@@ -24,6 +24,7 @@ Copy         ^b [ ... <space> ... <enter>           Show #       ^b q
  Start          <space>                             Split Vert   ^b %                   |
  Copy           <enter>                             Pane->Window ^b !
 Paste        ^b ]                                   Kill         ^b x
+refresh conf ^r
 
 ==========================================          Reorganize   ^b <space>
              SESSION (Set of Windows)               Expand       ^b <alt><arrow>
