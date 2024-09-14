@@ -16,10 +16,10 @@ Kill         kill-session -t <session>              Close        ^b &
                                                     Choose       ^b w <name>
 Detach       ^a d
 List         ^a =                                   ==========================================
-Buffer       ^b <PgUpDn>                                         PANE (SPLIT WINDOW)
-Command      ^b : <command>                         ==========================================
+Buffer       ^a <PgUpDn>                                         PANE (SPLIT WINDOW)
+Command      ^a : <command>                         ==========================================
 
-Copy         ^b [ ... <space> ... <enter>           Show #       ^b q
+Copy         ^a [ ... <space> ... <enter>           Show #       ^b q
  Moving         vim/emacs key bindings              Split Horiz  ^b "                --------
  Start          <space>                             Split Vert   ^b %                   |
  Copy           <enter>                             Pane->Window ^b !
@@ -30,10 +30,10 @@ refresh conf ^r
              SESSION (Set of Windows)               Expand       ^b <alt><arrow>
 ==========================================          Resize       ^b ^<arrow>
                                                     Resize x n   ^b <n> <arrow>
-New          ^b :new     ^b :new -s <name>
-Rename       ^b $                                   Select       ^b <arrow>
-List         ^b s                                   Previous     ^b {
-Next         ^b (                                   Next         ^b }
-Previous     ^b )                                   Switch       ^b o                  other
+New          ^a :new     ^b :new -s <name>
+Rename       ^a $                                   Select       ^b <arrow>
+List         ^a s                                   Previous     ^b {
+Next         ^a (                                   Next         ^b }
+Previous     ^a )                                   Switch       ^b o                  other
                                                     Swap         ^b ^o
                                                     Last         ^b ;
