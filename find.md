@@ -1,8 +1,7 @@
 ## 𝐅𝐢𝐧𝐝 𝐂𝐡𝐞𝐚𝐭𝐬𝐡𝐞𝐞𝐭
 
 - Usage: 
-```
-find <path> <conditions> <actions>
+	find <path> <conditions> <actions>
 ```
 
 - Access time conditions:
@@ -56,3 +55,5 @@ find <path> <conditions> <actions>
 ```
 find / -user bandit7 -group bandit6 -size 33c
 ```
+- find a file anywhere with the extension .env
+find / -type f -name "*.env"
