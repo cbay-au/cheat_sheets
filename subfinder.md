@@ -1,91 +1,65 @@
 
 
 	ref:-	https://highon.coffee/blog/subfinder-cheat-sheet/
+	ref:-	https://docs.projectdiscovery.io/tools/subfinder/install#post-install-configuration
 
 
 	Subfinder supports the following data API sources:
 
-	NAME	URL
-	BeVigil	
-	https://bevigil.com/osint-api
+	NAME		URL
+	BeVigil		https://bevigil.com/osint-api
 
-	BinaryEdge	
-	https://binaryedge.io
+	BinaryEdge	https://binaryedge.io
 
-	BufferOver	
-	https://tls.bufferover.run
+	BufferOver	https://tls.bufferover.run
 
-	C99	
-	https://api.c99.nl/
+	C99		https://api.c99.nl/
 
-	Censys	
-	https://censys.io
+	Censys		https://censys.io
 
-	CertSpotter	
-	https://sslmate.com/certspotter/api/
+	CertSpotter	https://sslmate.com/certspotter/api/
 
-	Chaos	
-	https://chaos.projectdiscovery.io
+	Chaos		https://chaos.projectdiscovery.io
 
-	Chinaz	
-	http://my.chinaz.com/ChinazAPI/DataCenter/MyDataApi
+	Chinaz		http://my.chinaz.com/ChinazAPI/DataCenter/MyDataApi
 
-	DNSDB	
-	https://api.dnsdb.info
+	DNSDB		https://api.dnsdb.info
 
-	Fofa	
-	https://fofa.info/static_pages/api_help
+	Fofa		https://fofa.info/static_pages/api_help
 
-	FullHunt	
-	https://fullhunt.io
+	FullHunt	https://fullhunt.io
 
-	GitHub	
-	https://github.com
+	GitHub		https://github.com
 
-	Intelx	
-	https://intelx.io
+	Intelx		https://intelx.io
 
-	PassiveTotal	
-	http://passivetotal.org
+	PassiveTotal	http://passivetotal.org
 
-	quake	
-	https://quake.360.cn
+	quake		https://quake.360.cn
 
-	Robtex	
-	https://www.robtex.com/api/
+	Robtex		https://www.robtex.com/api/
 
-	SecurityTrails	
-	http://securitytrails.com
+	SecurityTrails	http://securitytrails.com
 
-	Shodan	
-	https://shodan.io
+	Shodan		https://shodan.io
 
-	ThreatBook	
-	https://x.threatbook.cn/en
+	ThreatBook	https://x.threatbook.cn/en
 
-	VirusTotal	
-	https://www.virustotal.com
+	VirusTotal	https://www.virustotal.com
 
-	WhoisXML API	
-	https://whoisxmlapi.com/
+	WhoisXML API	https://whoisxmlapi.com/
 
-	ZoomEye	
-	https://www.zoomeye.org
+	ZoomEye		https://www.zoomeye.org
 
-	ZoomEye API	
-	https://api.zoomeye.org
+	ZoomEye API	https://api.zoomeye.org
 
-	dnsrepo	
-	https://dnsrepo.noc.org
+	dnsrepo		https://dnsrepo.noc.org
 
-	Hunter	
-	https://hunter.qianxin.com/
+	Hunter		https://hunter.qianxin.com/
 
-	Facebook	
-	https://developers.facebook.com
+	Facebook	https://developers.facebook.com
 
-	BuiltWith	
-	https://api.builtwith.com/domain-api
+	BuiltWith	https://api.builtwith.com/domain-api
 
 
 
