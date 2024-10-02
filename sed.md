@@ -41,30 +41,6 @@ NUMBERING:
 
 TEXT CONVERSION AND SUBSTITUTION:
 
- # IN UNIX ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format.
- sed 's/.$//'               # assumes that all lines end with CR/LF
- sed 's/^M$//'              # in bash/tcsh, press Ctrl-V then Ctrl-M
- sed 's/\x0D$//'            # works on ssed, gsed 3.02.80 or higher
-
- # IN UNIX ENVIRONMENT: convert Unix newlines (LF) to DOS format.
- sed "s/$/`echo -e \\\r`/"            # command line under ksh
- sed 's/$'"/`echo \\\r`/"             # command line under bash
- sed "s/$/`echo \\\r`/"               # command line under zsh
- sed 's/$/\r/'                        # gsed 3.02.80 or higher
-
- # IN DOS ENVIRONMENT: convert Unix newlines (LF) to DOS format.
- sed "s/$//"                          # method 1
- sed -n p                             # method 2
-
- # IN DOS ENVIRONMENT: convert DOS newlines (CR/LF) to Unix format.
- # Can only be done with UnxUtils sed, version 4.0.7 or higher. The
- # UnxUtils version can be identified by the custom "--text" switch
- # which appears when you use the "--help" switch. Otherwise, changing
- # DOS newlines to Unix newlines cannot be done with sed in a DOS
- # environment. Use "tr" instead.
- sed "s/\r//" infile >outfile         # UnxUtils sed v4.0.7 or higher
- tr -d \r <infile >outfile            # GNU tr version 1.22 or higher
-
  # delete leading whitespace (spaces, tabs) from front of each line
  # aligns all text flush left
  sed 's/^[ \t]*//'                    # see note on '\t' at end of file
@@ -415,5 +391,15 @@ will drastically reduce processing time for large files. Thus:
    sed -n '45,50p' filename           # print line nos. 45-50 of a file
    sed -n '51q;45,50p' filename       # same, but executes much faster
 
-======================================================================
 -------------------------------------------------------------------------
+
+To remove the line and print the output to standard out:
+	sed '/pattern to match/d' ./infile
+
+First part deletes lines containinig https
+Second part removes http://
+Third part removes trailing slash
+	sed '/https/d' tmplst.txt | sed 's/http\?:\/\///' | sed -e "s/\/*$//" >> tmplst_1.txt
+
+
+

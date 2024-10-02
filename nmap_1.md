@@ -74,23 +74,23 @@ NMAP is one of the most popular network mappers in the infosec world. It’s uti
 ----
 |	Example|	Description|
 |---|--|
-|nmap -f [172.16.1.1]	|scan fragment packets|
-|nmap –mtu [MTU] [172.16.1.1]	|specify MTU|
-|nmap -sI [zombie] [172.16.1.1]	|scan idle zoombie|
+|nmap -f [172.16.1.1]			|scan fragment packets|
+|nmap –mtu [MTU] [172.16.1.1]		|specify MTU|
+|nmap -sI [zombie] [172.16.1.1]		|scan idle zoombie|
 |nmap –source-port [port] [172.16.1.1]	|manual source port - specify|
 |nmap –data-length [size] [172.16.1.1]	|randomly append data|
 |nmap –randomize-hosts [172.16.1.1]	172.16.1.1 |scan order randomization|
-|nmap –badsum [172.16.1.1]	|bad checksum|
+|nmap –badsum [172.16.1.1]		|bad checksum|
  
 
 **NMAP output formats**
 ----
-|Description|	Syntax|
+|Description		|Syntax|
 |---|--|
-|Default/normal output|	nmap -oN scan.txt 172.16.1.1|
-|XML|	nmap -oX scanr.xml 172.16.1.1|
-|Grepable format|	snmap -oG grep.txt 172.16.1.1|
-|All formats|	nmap -oA 172.16.1.1|
+|Default/normal output	|nmap -oN scan.txt 172.16.1.1|
+|XML			|nmap -oX scanr.xml 172.16.1.1|
+|Grepable format	|snmap -oG grep.txt 172.16.1.1|
+|All formats		|nmap -oA 172.16.1.1|
 
 
 **Scan options**
