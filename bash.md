@@ -5,76 +5,18 @@
 !???			search history for the last ??? command
 ^original^replacement^	previous command replace parts of command
 !!:1			same as !1
-history 5		truncates output to the last 5 commands
-
-
-NEEDS REVIEW & SUMMERISING
-
-
-
-Searching through Bash History
-Although piping the history command through grep can be a useful way to narrow down the results, it isn’t ideal in many situations.
-
-Bash includes search functionality for its history. The typical way of using this is through searching backwards in history (most recent results returned first) using the CTRL + R key combination.
-
-For instance, you can type CTRL + R, and begin typing part of the previous command. You only have to type out part of the command. If it matches an unwanted command instead, you can press CTRL + R again for the next result.
-
-If you accidentally pass the command you wanted, you can move in the opposite direction by typing CTRL + S. This also can be useful if you’ve moved to a different point in your history using the keys in the last section and wish to search forward.
-
-Be aware that, in many terminals, the CTRL + S combination is mapped to suspend the terminal session. This will intercept any attempts to pass CTRL + S to bash, and will “freeze” your terminal. To unfreeze, type CTRL + Q to unsuspend the session.
-
-This suspend and resume feature is not needed in most modern terminals, and you can turn it off without any problem by running the following command:
-
-stty -ixon
-stty is a utility that allows you to change your terminal’s settings from the command line. You could add this stty -ixon command to the end of your ~/.bashrc file to make this change permanent as well.
-
-If you try searching with CTRL + S again now, it should work as expected to allow you to search forwards.
-
-Searching after You’ve Typed Part of the Command
-A common scenario to find yourself in is to type in part of a command, only to then realize that you have executed it previously and can search the history for it.
-
-The correct way of searching using what is already on your command line is to move your cursor to the beginning of the line with CTRL + A, call the reverse history with CTRL + R, paste the current line into the search with CTRL + Y, and then using the CTRL + R again to search in reverse.
-
-For instance, suppose you want to update your package cache on an Ubuntu system. You’ve already typed this out recently, but you didn’t think about that until after you’ve typed the sudo in the prompt again:
-
-sudo
-At this point, you realize that this is an operation you’ve definitely done in the past day or so. You can press CTRL + A to move your cursor to the beginning of the line. Then, press CTRL + R to call your reverse incremental history search. This has a side effect of copying all of the content on the command line that was after our cursor position and putting it into your clipboard.
-
-Next, press CTRL + Y to paste the command segments that you just copied from the command line into the search. Lastly, press CTRL + R to move backwards in your history, searching for commands containing the content you’ve just pasted.
-
-Using shortcuts like this may seem tedious at first, but it can be quite useful when you get used to it. It is extremely helpful when you find yourself in a position where you’ve typed out half of a complex command and know you’re going to need the history to finish the rest.
-
-Rather than thinking of these as separate key combinations, it may help you to think of them as a single compound operation. You can just hold the CTRL key down and then press A, R, Y, and then the R key down in succession.
-
-Getting Familiar with More Advanced History Expansion
-This guide has already touched on some of the most fundamental history expansion techniques that bash provides. Some of the ones we’ve covered so far are:
+history 5		truncates output to the last 5 command
+!$			returns the last argument used
 
 !!: Expand to the last command
 !n: Expand the command with history number “n”.
 !-n: Expand to the command that was “n” number of commands before the current command in history.
-Event Designators
-The above three examples are instances of event designators. These generally are ways of recalling previous history commands using certain criteria. They are the selection portion of your available operations.
 
-For example, you can execute the last ssh command that you ran by typing something like:
+Here Docs
+	cat > afile.txt << 'END'
+	a file contents
+	END
 
-!ssh
-This searches for lines in your command history that begin with ssh. If you want to search for a string that isn’t at the beginning of the command, you can surround it with ? characters. For instance, to repeat a previous apt-cache search command, you could likely run the following command to find and execute it:
-
-!?search?
-Another event designator you can try involves substituting a string within your last command for another. To do this, enter a caret symbol (^) followed by the string you want to replace, then immediately follow that with another caret, the replacement string, and a final caret at the end. Don’t include any spaces unless they’re part of the string you want to replace or part of the string you want to use as the replacement:
-
-^original^replacement^
-This will recall the previous command (just like !!), search for an instance of original within the command string, and replace it with replacement. It will then execute the command using the replacement string.
-
-This is useful for dealing with things like misspellings. For instance, say you mistakenly run this command when trying to read the contents of the /etc/hosts file:
-
-cat /etc/hosst
-Output
-cat: /etc/hosst: No such file or directory
-Rather then rewriting the entire command, you could run the following instead:
-
-^hosst^hosts^
-This will fix the error in the previous command and execute it successfully.
 
 Word Designators
 After event designators, you can add a colon (:) followed by a word designator to select a portion of the matched command.

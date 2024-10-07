@@ -45,8 +45,8 @@ http-wordpress-users.nse
 http-wordpress-enum.nse
 http-wordpress-brute.nse
   nmap -sV --script http-wordpress-brute --script-args 'userdb=users.txt,passdb=passwords file,http-wordpress-brute.hostname=domain.com,http-wordpress-brute.threads=3,brute.firstonly=true' <target>
-http-vuln-cve2017-1001000.nse
-http-vuln-cve2014-8877.nse
+http-vuln-cve2017-1001000.nse    # for WP V 4.7.0 & 4.7.1
+http-vuln-cve2014-8877.nse	 # Versions <= 2.0.0
 
 ```
 - Nmap Output Formats
